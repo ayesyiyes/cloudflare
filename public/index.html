@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halo, Dunia</title>
+  <meta name="description" content="Website statis sederhana siap deploy di Cloudflare.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <span class="logo">situsku</span>
+    <button id="theme-toggle" type="button" aria-label="Ganti tema">Mode gelap</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p id="greeting" class="greeting">Halo</p>
+      <h1>Ini website statis pertamaku.</h1>
+      <p class="lead">Tiga file, tanpa build, langsung jalan. Ganti teks ini dengan isi kontenmu sendiri.</p>
+      <a class="btn" href="#tentang">Lihat selengkapnya</a>
+    </section>
+
+    <section id="tentang" class="about">
+      <h2>Tentang</h2>
+      <p>Tulis penjelasan singkat tentang dirimu, usahamu, atau proyekmu di sini.</p>
+      <ul class="links">
+        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:halo@contoh.com">Email</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> situsku. Waktu sekarang: <time id="clock">--:--:--</time></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+:root {
+  --bg: #eef2f7;
+  --surface: #ffffff;
+  --ink: #14213d;
+  --muted: #5b6b82;
+  --accent: #2f6fed;
+  --accent-ink: #ffffff;
+  --line: #d5dce6;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f1726;
+  --surface: #172236;
+  --ink: #e8edf5;
+  --muted: #9aa9bf;
+  --accent: #6c9bff;
+  --accent-ink: #0f1726;
+  --line: #27344d;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.bar,
+main,
+footer {
+  width: min(100% - 2rem, 44rem);
+  margin-inline: auto;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.25rem;
+}
+
+.logo { font-weight: 700; letter-spacing: -0.01em; }
+
+button,
+.btn {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+#theme-toggle {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 0.4rem 0.8rem;
+}
+
+.hero { padding-block: 4rem 3rem; }
+
+.greeting {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.lead {
+  max-width: 34rem;
+  margin: 0 0 1.75rem;
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.25rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.about {
+  padding: 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+h2 { margin: 0 0 0.5rem; font-size: 1.375rem; }
+
+.links {
+  display: flex;
+  gap: 1.25rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+a { color: var(--accent); }
+.btn { color: var(--accent-ink); }
+
+footer {
+  padding-block: 2rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
